@@ -14,4 +14,4 @@ RUN yes | CONF_DIR=/etc/elasticsearch gosu elasticsearch bin/elasticsearch-plugi
 
 RUN curl -O https://object-storage.tyo2.conoha.io/v1/nc_2520839e1f9641b08211a5c85243124a/sudachi/sudachi-dictionary-20200330-full.zip
 RUN unzip sudachi-dictionary-20200330-full.zip
-RUN mkdir sudachi_tokenizer && mv ./sudachi-dictionary-20200330/system_full.dic ./sudachi_tokenizer/system_core.dic
+RUN mkdir /etc/elasticsearch/sudachi_tokenizer && mv ./sudachi-dictionary-20200330/system_full.dic /etc/elasticsearch/sudachi_tokenizer/system_core.dic
